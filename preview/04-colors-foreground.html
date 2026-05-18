@@ -1,0 +1,20 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><link rel="stylesheet" href="_base.css">
+<style>
+  .card { padding: 20px 24px; gap: 8px; }
+  .row { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; }
+  .sw { display:flex; flex-direction:column; gap: 6px; }
+  .sw .chip { height: 64px; border-radius: 4px; border: 1px solid var(--line); display: flex; align-items: center; justify-content: center; font-family: var(--font-display); font-weight: 700; font-size: 24px; }
+  .sw .n { font-family: var(--font-mono); font-size: 10px; color: var(--fg-1); letter-spacing: 0.1em; text-transform: uppercase; }
+  .sw .v { font-family: var(--font-mono); font-size: 10px; color: var(--fg-2); }
+  .heading { font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.14em; color: var(--fg-2); text-transform: uppercase; }
+</style></head>
+<body><div class="card">
+  <div class="heading">Foreground · text</div>
+  <div class="row">
+    <div class="sw"><div class="chip" style="background:#0A0B12;color:#F4F5FA">Aa</div><div class="n">fg</div><div class="v">#F4F5FA</div></div>
+    <div class="sw"><div class="chip" style="background:#0A0B12;color:#B7BBC8">Aa</div><div class="n">fg-1</div><div class="v">#B7BBC8</div></div>
+    <div class="sw"><div class="chip" style="background:#0A0B12;color:#6B7080">Aa</div><div class="n">fg-2</div><div class="v">#6B7080</div></div>
+    <div class="sw"><div class="chip" style="background:#0A0B12;color:#3B3F4E">Aa</div><div class="n">fg-3</div><div class="v">#3B3F4E</div></div>
+  </div>
+</div></body></html>

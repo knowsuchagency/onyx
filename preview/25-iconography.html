@@ -1,0 +1,27 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><link rel="stylesheet" href="_base.css">
+<style>
+  .card { padding: 24px; gap: 14px; justify-content: center; }
+  .heading { font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.14em; color: var(--fg-2); text-transform: uppercase; }
+  .grid { display: grid; grid-template-columns: repeat(8, 1fr); gap: 14px; }
+  .ic { display: flex; flex-direction: column; align-items: center; gap: 6px; padding: 10px 6px; border: 1px solid var(--line); border-radius: 3px; }
+  .ic .g { font-family: var(--font-mono); font-size: 16px; color: var(--fg-1); line-height: 1; }
+  .ic .n { font-family: var(--font-mono); font-size: 9px; letter-spacing: 0.14em; color: var(--fg-2); text-transform: uppercase; }
+  .ic .dot { width: 8px; height: 8px; border-radius: 999px; background: var(--accent); }
+  .lucide { width: 16px; height: 16px; stroke: var(--fg-1); stroke-width: 1.5; fill: none; }
+  .v { font-family: var(--font-mono); font-size: 10px; color: var(--fg-2); }
+</style></head>
+<body><div class="card">
+  <div class="heading">Status glyphs + Lucide utility icons</div>
+  <div class="grid">
+    <div class="ic"><span class="dot"></span><span class="n">dot</span></div>
+    <div class="ic"><span class="g">+</span><span class="n">add</span></div>
+    <div class="ic"><span class="g">✓</span><span class="n">ok</span></div>
+    <div class="ic"><span class="g" style="color:var(--danger)">⚠</span><span class="n">warn</span></div>
+    <div class="ic"><span class="g">▸</span><span class="n">arrow</span></div>
+    <div class="ic"><span class="g">⌖</span><span class="n">crosshair</span></div>
+    <div class="ic"><svg class="lucide" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><line x1="16" y1="16" x2="21" y2="21"/></svg><span class="n">search</span></div>
+    <div class="ic"><svg class="lucide" viewBox="0 0 24 24"><line x1="6" y1="6" x2="18" y2="18"/><line x1="6" y1="18" x2="18" y2="6"/></svg><span class="n">close</span></div>
+  </div>
+  <div class="v">Glyphs in mono / Lucide @ 16px / 1.5 stroke / fg-1 default</div>
+</div></body></html>

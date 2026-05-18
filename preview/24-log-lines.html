@@ -1,0 +1,21 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><link rel="stylesheet" href="_base.css">
+<style>
+  .card { padding: 22px 24px; gap: 12px; justify-content: center; }
+  .heading { font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.14em; color: var(--fg-2); text-transform: uppercase; }
+  .log { display: flex; flex-direction: column; gap: 6px; font-family: var(--font-mono); font-size: 11px; line-height: 1.5; }
+  .log .ln { display: flex; gap: 16px; }
+  .log .ts { color: var(--fg-2); flex-shrink: 0; }
+  .log .msg { color: var(--fg-1); }
+  .log .msg.act { color: var(--accent); }
+</style></head>
+<body><div class="card">
+  <div class="heading">Latest logs · monospace, terminal voice</div>
+  <div class="log">
+    <div class="ln"><span class="ts">14:32:10</span><span class="msg act">Searching Crunchbase…</span></div>
+    <div class="ln"><span class="ts">14:32:12</span><span class="msg">Retrieved 120 results</span></div>
+    <div class="ln"><span class="ts">14:32:14</span><span class="msg">Filtering by date range…</span></div>
+    <div class="ln"><span class="ts">14:32:16</span><span class="msg">Aggregating funding data…</span></div>
+    <div class="ln"><span class="ts">14:32:18</span><span class="msg" style="color:var(--warn)">⚠ Rate limit approaching (82 / 100)</span></div>
+  </div>
+</div></body></html>

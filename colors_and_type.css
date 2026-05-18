@@ -1,0 +1,244 @@
+/* =========================================================================
+   ONYX DESIGN SYSTEM — Core tokens
+   Color · Type · Spacing · Radii · Borders · Motion
+   ========================================================================= */
+
+/* Webfonts — loaded from Google Fonts CDN.
+   Substitute notes:
+   - Display: the original render uses an unidentified heavy geometric sans.
+     Closest free match = Space Grotesk 700.  FLAGGED.
+   - Sans: Geist (modern, neutral). Falls back to IBM Plex Sans then system.
+   - Mono: JetBrains Mono. Strong fit for the terminal/instrument feel. */
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Geist:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap');
+
+:root {
+  /* ────────────────────────────────────────────────────────────────────────
+     COLOR — base
+     A near-black canvas, cool achromatic structure, one indigo accent,
+     three semantic colors. No more than five total in normal use.
+     ──────────────────────────────────────────────────────────────────────── */
+
+  /* Canvas */
+  --bg:           #06070C;  /* page background */
+  --bg-1:         #0A0B12;  /* panels, raised cards */
+  --bg-2:         #11131C;  /* hover/pressed surfaces */
+  --bg-vis:       #08091A;  /* particle wave area (subtle lift) */
+
+  /* Foreground */
+  --fg:           #F4F5FA;  /* primary text */
+  --fg-1:         #B7BBC8;  /* secondary text */
+  --fg-2:         #6B7080;  /* tertiary / muted labels */
+  --fg-3:         #3B3F4E;  /* near-disabled */
+
+  /* Structural lines */
+  --line:         #1F2230;  /* default 1px border */
+  --line-1:       #2A2D3D;  /* hover border */
+  --line-active:  #3B3F5A;  /* selected/focused border */
+  --line-dash:    #2A2D3D;  /* dotted-connector color */
+
+  /* Accent — indigo (single color, the only non-neutral chrome) */
+  --accent:        #7B7FFF;
+  --accent-1:      #9498FF;  /* lighter, used for hover/active glow */
+  --accent-2:      #5C61E6;  /* pressed */
+  --accent-fade:   rgba(123, 127, 255, 0.18); /* selection, inner-glow */
+  --accent-grid:   rgba(123, 127, 255, 0.45); /* particle-wave dots */
+
+  /* Semantic — reserved for status only */
+  --warn:          #F2B144;  /* amber / waiting / medium-priority */
+  --warn-fade:     rgba(242, 177, 68, 0.16);
+  --danger:        #F2545B;  /* red / SLA breach / high-priority */
+  --danger-fade:   rgba(242, 84, 91, 0.16);
+  --ok:            #4ADE9A;  /* completion confirm (used sparingly) */
+  --ok-fade:       rgba(74, 222, 154, 0.16);
+
+  /* ────────────────────────────────────────────────────────────────────────
+     TYPE — families
+     ──────────────────────────────────────────────────────────────────────── */
+  --font-display: 'Space Grotesk', 'Geist', system-ui, sans-serif;
+  --font-sans:    'Geist', 'IBM Plex Sans', system-ui, sans-serif;
+  --font-mono:    'JetBrains Mono', ui-monospace, 'SF Mono', monospace;
+
+  /* TYPE — scale */
+  --t-display:   96px;  /* hero numerals / wordmarks */
+  --t-h1:        56px;
+  --t-h2:        32px;
+  --t-h3:        20px;
+  --t-body:      14px;
+  --t-small:     12px;
+  --t-micro:     10px;  /* uppercase labels, IDs */
+
+  /* TYPE — weights */
+  --w-bold:      700;
+  --w-semibold:  600;
+  --w-medium:    500;
+  --w-regular:   400;
+
+  /* TYPE — tracking */
+  --tr-tight:    -0.02em;
+  --tr-snug:     -0.01em;
+  --tr-normal:   0;
+  --tr-loose:    0.08em;
+  --tr-uppercase: 0.14em;
+
+  /* TYPE — line-height */
+  --lh-tight:    1.05;
+  --lh-snug:     1.2;
+  --lh-normal:   1.45;
+  --lh-relaxed:  1.6;
+
+  /* ────────────────────────────────────────────────────────────────────────
+     SPACING — 4px base
+     ──────────────────────────────────────────────────────────────────────── */
+  --s-1:   4px;
+  --s-2:   8px;
+  --s-3:   12px;
+  --s-4:   16px;
+  --s-5:   20px;
+  --s-6:   24px;
+  --s-7:   32px;
+  --s-8:   40px;
+  --s-9:   56px;
+  --s-10:  72px;
+
+  /* ────────────────────────────────────────────────────────────────────────
+     RADII — almost flat
+     ──────────────────────────────────────────────────────────────────────── */
+  --radius-sm: 2px;
+  --radius-md: 4px;
+  --radius-lg: 6px;
+  --radius-pill: 999px;
+
+  /* ────────────────────────────────────────────────────────────────────────
+     BORDERS — thin, monochrome
+     ──────────────────────────────────────────────────────────────────────── */
+  --border:        1px solid var(--line);
+  --border-hover:  1px solid var(--line-1);
+  --border-active: 1px solid var(--line-active);
+  --border-accent: 1px solid var(--accent);
+  --border-dash:   1px dashed var(--line-dash);
+
+  /* ────────────────────────────────────────────────────────────────────────
+     ELEVATION — minimal. No drop shadows for cards.
+     Inner-glow for active/live; soft drop only for overlays.
+     ──────────────────────────────────────────────────────────────────────── */
+  --glow-accent:   inset 0 0 0 1px var(--accent), 0 0 0 1px var(--accent-fade);
+  --glow-warn:     inset 0 0 0 1px var(--warn),   0 0 0 1px var(--warn-fade);
+  --glow-danger:   inset 0 0 0 1px var(--danger), 0 0 0 1px var(--danger-fade);
+  --shadow-overlay: 0 24px 64px -16px rgba(0,0,0,0.6), 0 0 0 1px var(--line);
+
+  /* ────────────────────────────────────────────────────────────────────────
+     MOTION — tight, fast, no bounce
+     ──────────────────────────────────────────────────────────────────────── */
+  --ease:        cubic-bezier(0.2, 0.7, 0.1, 1);
+  --dur-fast:    80ms;
+  --dur:         120ms;
+  --dur-med:     240ms;
+  --dur-slow:    480ms;
+}
+
+/* =========================================================================
+   SEMANTIC ELEMENT STYLES
+   Apply by setting font-family/size on these vars or extending these classes.
+   ========================================================================= */
+
+html, body {
+  background: var(--bg);
+  color: var(--fg);
+  font-family: var(--font-sans);
+  font-size: var(--t-body);
+  line-height: var(--lh-normal);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+::selection { background: var(--accent-fade); color: var(--fg); }
+:focus-visible { outline: 1px solid var(--accent); outline-offset: 2px; }
+
+/* Display — used for wordmarks & hero numerals */
+.display, h1.display {
+  font-family: var(--font-display);
+  font-weight: var(--w-bold);
+  font-size: var(--t-display);
+  line-height: var(--lh-tight);
+  letter-spacing: var(--tr-tight);
+  color: var(--fg);
+}
+
+/* Headings */
+h1, .h1 {
+  font-family: var(--font-display);
+  font-weight: var(--w-bold);
+  font-size: var(--t-h1);
+  line-height: var(--lh-tight);
+  letter-spacing: var(--tr-tight);
+}
+h2, .h2 {
+  font-family: var(--font-sans);
+  font-weight: var(--w-semibold);
+  font-size: var(--t-h2);
+  line-height: var(--lh-snug);
+  letter-spacing: var(--tr-snug);
+}
+h3, .h3 {
+  font-family: var(--font-sans);
+  font-weight: var(--w-semibold);
+  font-size: var(--t-h3);
+  line-height: var(--lh-snug);
+  letter-spacing: var(--tr-snug);
+}
+
+/* Body */
+p, .body {
+  font-family: var(--font-sans);
+  font-size: var(--t-body);
+  line-height: var(--lh-normal);
+  color: var(--fg-1);
+}
+
+/* Small / caption */
+.small {
+  font-family: var(--font-sans);
+  font-size: var(--t-small);
+  line-height: var(--lh-normal);
+  color: var(--fg-2);
+}
+
+/* Mono — IDs, log lines, table values */
+.mono, code, kbd, samp {
+  font-family: var(--font-mono);
+  font-size: var(--t-small);
+  letter-spacing: var(--tr-normal);
+  color: var(--fg-1);
+}
+
+/* Tracked uppercase label — the workhorse */
+.label {
+  font-family: var(--font-mono);
+  font-size: var(--t-micro);
+  font-weight: var(--w-medium);
+  text-transform: uppercase;
+  letter-spacing: var(--tr-uppercase);
+  color: var(--fg-2);
+}
+
+/* Inline ID chip */
+.id {
+  font-family: var(--font-mono);
+  font-size: var(--t-small);
+  color: var(--fg-1);
+  letter-spacing: var(--tr-normal);
+}
+
+/* Status dot helper — pair with --accent / --warn / --danger / --ok */
+.dot {
+  display: inline-block;
+  width: 6px; height: 6px;
+  border-radius: 999px;
+  background: var(--accent);
+  vertical-align: middle;
+  animation: onyx-breathe 2s var(--ease) infinite;
+}
+@keyframes onyx-breathe {
+  0%, 100% { opacity: 0.55; }
+  50%      { opacity: 1;    }
+}

@@ -1,0 +1,22 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><link rel="stylesheet" href="_base.css">
+<style>
+  .card { padding: 24px; gap: 14px; justify-content: center; }
+  .strip { display: grid; grid-template-columns: repeat(5, 1fr); gap: 28px; }
+  .m { display: flex; flex-direction: column; gap: 8px; }
+  .m .lbl { font-family: var(--font-mono); font-size: 10px; line-height: 1.4; text-transform: uppercase; letter-spacing: 0.14em; color: var(--fg-2); min-height: 2.8em; display: flex; align-items: flex-end; }
+  .m .val { font-family: var(--font-display); font-weight: 700; font-size: 32px; color: var(--fg); letter-spacing: -0.02em; line-height: 1; }
+  .m .val .u { color: var(--fg-2); font-size: 16px; margin-left: 4px; }
+  .m.alert .val { color: var(--danger); }
+  .heading { font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.14em; color: var(--fg-2); text-transform: uppercase; }
+</style></head>
+<body><div class="card">
+  <div class="heading">Metric strip · KPI numerals · 32 px display</div>
+  <div class="strip">
+    <div class="m"><span class="lbl">Active runs</span><span class="val">24</span></div>
+    <div class="m"><span class="lbl">Completed (24h)</span><span class="val">89</span></div>
+    <div class="m alert"><span class="lbl">SLA breaches</span><span class="val">1 <span class="u">⚠</span></span></div>
+    <div class="m"><span class="lbl">Tokens (24h)</span><span class="val">2.4<span class="u">M</span></span></div>
+    <div class="m"><span class="lbl">Est. cost (24h)</span><span class="val">$38.72</span></div>
+  </div>
+</div></body></html>

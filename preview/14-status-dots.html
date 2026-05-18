@@ -1,0 +1,21 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><link rel="stylesheet" href="_base.css">
+<style>
+  .card { padding: 24px; gap: 16px; justify-content: center; }
+  .row { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
+  .item { display: flex; flex-direction: column; gap: 8px; }
+  .row2 { display: flex; align-items: center; gap: 8px; font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--fg-1); }
+  .dot { width: 7px; height: 7px; border-radius: 999px; animation: breathe 2s ease-in-out infinite; }
+  .v { font-family: var(--font-mono); font-size: 10px; color: var(--fg-2); }
+  @keyframes breathe { 0%,100% { opacity: 0.55 } 50% { opacity: 1 } }
+  .heading { font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.14em; color: var(--fg-2); text-transform: uppercase; }
+</style></head>
+<body><div class="card">
+  <div class="heading">Status dots · color carries meaning</div>
+  <div class="row">
+    <div class="item"><div class="row2"><span class="dot" style="background:#7B7FFF"></span>ACTIVE</div><div class="v">--accent · live run</div></div>
+    <div class="item"><div class="row2"><span class="dot" style="background:#F2B144"></span>WAITING</div><div class="v">--warn · blocked</div></div>
+    <div class="item"><div class="row2"><span class="dot" style="background:#F2545B"></span>BREACH</div><div class="v">--danger · SLA</div></div>
+    <div class="item"><div class="row2"><span class="dot" style="background:#4ADE9A"></span>COMPLETE</div><div class="v">--ok · finished</div></div>
+  </div>
+</div></body></html>

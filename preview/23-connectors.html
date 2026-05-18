@@ -1,0 +1,36 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><link rel="stylesheet" href="_base.css">
+<style>
+  .card { padding: 24px; gap: 14px; justify-content: center; }
+  .heading { font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.14em; color: var(--fg-2); text-transform: uppercase; }
+  .stage { display: flex; align-items: center; gap: 0; }
+  .node {
+    border: 1px solid var(--line-1); border-radius: 3px;
+    padding: 8px 12px; font-family: var(--font-mono); font-size: 10px; text-transform: uppercase; letter-spacing: 0.14em; color: var(--fg-1);
+    background: var(--bg-1);
+    min-width: 64px; text-align: center;
+  }
+  .node.active { border-color: var(--accent); color: var(--accent); }
+  .dash {
+    flex: 1; height: 1px;
+    background-image: linear-gradient(to right, var(--line-active) 50%, transparent 0%);
+    background-size: 6px 1px; background-repeat: repeat-x;
+  }
+  .arrow {
+    color: var(--accent); font-family: var(--font-mono); font-size: 12px; padding: 0 4px;
+  }
+  .v { font-family: var(--font-mono); font-size: 10px; color: var(--fg-2); }
+</style></head>
+<body><div class="card">
+  <div class="heading">Connectors · 1px dashed, 6×1 gap</div>
+  <div class="stage">
+    <div class="node">Intake</div>
+    <div class="dash"></div><span class="arrow">▸</span>
+    <div class="node active">Plan</div>
+    <div class="dash"></div><span class="arrow">▸</span>
+    <div class="node">Execute</div>
+    <div class="dash"></div><span class="arrow">▸</span>
+    <div class="node">Review</div>
+  </div>
+  <div class="v">Flow lines are dashed, never solid. Arrows are indigo, monospace ▸.</div>
+</div></body></html>

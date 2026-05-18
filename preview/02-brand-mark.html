@@ -1,0 +1,22 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><link rel="stylesheet" href="_base.css">
+<style>
+  .card { padding: 24px; flex-direction: row; align-items: stretch; gap: 24px; }
+  .pane {
+    flex: 1; display: flex; flex-direction: column; gap: 10px;
+    border: 1px solid var(--line); padding: 16px; border-radius: 4px;
+    align-items: center; justify-content: center;
+  }
+  .pane .label { font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.14em; color: var(--fg-2); text-transform: uppercase; }
+  .sq-lg { width: 56px; height: 56px; background: var(--accent); }
+  .sq-md { width: 24px; height: 24px; background: var(--accent); }
+  .sq-sm { width: 12px; height: 12px; background: var(--accent); }
+  .sq-fav { width: 32px; height: 32px; background: var(--bg-1); border: 1px solid var(--line); display: flex; align-items: center; justify-content: center; }
+  .sq-fav .inner { width: 14px; height: 14px; background: var(--accent); }
+</style></head>
+<body><div class="card">
+  <div class="pane"><div class="sq-lg"></div><div class="label">Brand mark</div></div>
+  <div class="pane"><div class="sq-md"></div><div class="label">Section bullet</div></div>
+  <div class="pane"><div class="sq-sm"></div><div class="label">Status / inline</div></div>
+  <div class="pane"><div class="sq-fav"><div class="inner"></div></div><div class="label">Favicon</div></div>
+</div></body></html>

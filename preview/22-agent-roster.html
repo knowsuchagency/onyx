@@ -1,0 +1,26 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><link rel="stylesheet" href="_base.css">
+<style>
+  .card { padding: 18px 24px; gap: 0; justify-content: center; }
+  .heading { font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.14em; color: var(--fg-2); text-transform: uppercase; margin-bottom: 12px; display: flex; align-items: center; gap: 8px; }
+  .heading .dot { width: 5px; height: 5px; background: var(--accent); }
+  .rows { display: flex; flex-direction: column; }
+  .r { display: grid; grid-template-columns: 18px 1fr auto 56px; align-items: center; gap: 10px; padding: 8px 0; border-bottom: 1px solid var(--line); }
+  .r:last-child { border-bottom: none; }
+  .r .mark { width: 12px; height: 12px; border: 1px solid var(--fg-2); }
+  .r.active .mark { background: var(--accent); border-color: var(--accent); }
+  .r .name { font-family: var(--font-sans); font-size: 13px; color: var(--fg); font-weight: 500; }
+  .r .role { font-family: var(--font-sans); font-size: 11px; color: var(--fg-2); }
+  .r .conf { font-family: var(--font-mono); font-size: 11px; color: var(--fg-1); text-align: right; }
+  .r .bar { width: 56px; height: 2px; background: var(--line); }
+  .r .bar > div { height: 100%; background: var(--accent); }
+</style></head>
+<body><div class="card">
+  <div class="heading"><span class="dot"></span>Agent roster</div>
+  <div class="rows">
+    <div class="r active"><div class="mark"></div><div><div class="name">Strategist</div><div class="role">Planner Agent</div></div><div class="conf">0.72</div><div class="bar"><div style="width:72%"></div></div></div>
+    <div class="r active"><div class="mark"></div><div><div class="name">Researcher</div><div class="role">Search Agent</div></div><div class="conf">0.61</div><div class="bar"><div style="width:61%"></div></div></div>
+    <div class="r active"><div class="mark"></div><div><div class="name">Analyst</div><div class="role">Data Agent</div></div><div class="conf">0.68</div><div class="bar"><div style="width:68%"></div></div></div>
+    <div class="r"><div class="mark"></div><div><div class="name">Guardian</div><div class="role">Policy Agent</div></div><div class="conf" style="color:var(--danger)">0.33</div><div class="bar"><div style="width:33%; background:var(--danger)"></div></div></div>
+  </div>
+</div></body></html>

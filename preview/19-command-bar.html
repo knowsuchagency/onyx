@@ -1,0 +1,29 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><link rel="stylesheet" href="_base.css">
+<style>
+  .card { padding: 24px; gap: 14px; justify-content: center; }
+  .heading { font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.14em; color: var(--fg-2); text-transform: uppercase; }
+  .cmd {
+    display: flex; align-items: center; gap: 12px;
+    border: 1px solid var(--line-1); border-radius: 6px;
+    padding: 0 14px;
+    height: 44px;
+    background: var(--bg-1);
+  }
+  .cmd .lbl { font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.14em; color: var(--fg-2); text-transform: uppercase; }
+  .cmd .input { flex: 1; font-family: var(--font-sans); font-size: 13px; color: var(--fg-1); }
+  .cmd .input .caret { display: inline-block; width: 7px; height: 15px; background: var(--accent); margin-left: 2px; vertical-align: middle; animation: blink 1s steps(1) infinite; }
+  .cmd .go { width: 28px; height: 28px; border-radius: 3px; background: var(--accent); display: flex; align-items: center; justify-content: center; color: #08091A; font-family: var(--font-mono); font-size: 14px; }
+  @keyframes blink { 50% { opacity: 0 } }
+  .v { font-family: var(--font-mono); font-size: 10px; color: var(--fg-2); }
+</style></head>
+<body><div class="card">
+  <div class="heading">Command bar · slash-driven</div>
+  <div class="cmd">
+    <span class="lbl">Command</span>
+    <span style="color:var(--fg-3); font-family: var(--font-mono);">|</span>
+    <span class="input">Type a command or / for actions<span class="caret"></span></span>
+    <span class="go">→</span>
+  </div>
+  <div class="v">Height 44 · radius 6 · 1px hover border · indigo caret blinks 1s</div>
+</div></body></html>

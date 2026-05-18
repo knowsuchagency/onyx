@@ -1,0 +1,22 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><link rel="stylesheet" href="_base.css">
+<style>
+  .card { padding: 22px 24px; gap: 12px; justify-content: center; }
+  .heading { font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.14em; color: var(--fg-2); text-transform: uppercase; }
+  .rows { display: grid; grid-template-columns: 1fr 1fr; gap: 0 24px; }
+  .col { display: flex; flex-direction: column; gap: 6px; padding: 10px 0; border-top: 1px solid var(--line); }
+  .col h { font-family: var(--font-mono); font-size: 9px; letter-spacing: 0.14em; color: var(--fg-2); text-transform: uppercase; }
+  .col .yes { font-family: var(--font-sans); font-size: 13px; color: var(--fg); }
+  .col .no { font-family: var(--font-sans); font-size: 13px; color: var(--fg-3); text-decoration: line-through; text-decoration-color: var(--danger); }
+</style></head>
+<body><div class="card">
+  <div class="heading">Voice · direct, declarative, terminal-honest</div>
+  <div class="rows">
+    <div class="col"><h>Do</h><div class="yes">Searching Crunchbase…</div></div>
+    <div class="col"><h>Don't</h><div class="no">Hold tight while we search Crunchbase! 🔍</div></div>
+    <div class="col"><h>Do</h><div class="yes">This step requires human approval.</div></div>
+    <div class="col"><h>Don't</h><div class="no">Hey there! We just need a quick approval.</div></div>
+    <div class="col"><h>Do</h><div class="yes">1 SLA breach in the last hour.</div></div>
+    <div class="col"><h>Don't</h><div class="no">Uh oh — looks like something went wrong!</div></div>
+  </div>
+</div></body></html>

@@ -1,0 +1,30 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><link rel="stylesheet" href="_base.css">
+<style>
+  .card { padding: 24px; gap: 14px; justify-content: center; }
+  .row { display: flex; gap: 10px; align-items: center; flex-wrap: wrap; }
+  .chip {
+    display: inline-flex; align-items: center; gap: 6px;
+    font-family: var(--font-mono); font-size: 10px; font-weight: 500;
+    text-transform: uppercase; letter-spacing: 0.14em;
+    padding: 4px 8px; border-radius: 2px;
+  }
+  .chip .dot { width: 5px; height: 5px; border-radius: 999px; }
+  .chip.hi { background: rgba(242,84,91,0.12); border: 1px solid rgba(242,84,91,0.4); color: #F2545B; }
+  .chip.md { background: rgba(242,177,68,0.12); border: 1px solid rgba(242,177,68,0.4); color: #F2B144; }
+  .chip.lo { background: rgba(123,127,255,0.10); border: 1px solid rgba(123,127,255,0.4); color: #9498FF; }
+  .chip.lbl { background: transparent; border: 1px solid var(--line-1); color: var(--fg-2); }
+  .heading { font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.14em; color: var(--fg-2); text-transform: uppercase; }
+</style></head>
+<body><div class="card">
+  <div class="heading">Priority &amp; tag chips</div>
+  <div class="row">
+    <span class="chip hi"><span class="dot" style="background:#F2545B"></span>High</span>
+    <span class="chip md"><span class="dot" style="background:#F2B144"></span>Medium</span>
+    <span class="chip lo"><span class="dot" style="background:#9498FF"></span>Low</span>
+    <span class="chip lbl">Web Intake</span>
+    <span class="chip lbl">API · Webhook</span>
+    <span class="chip lbl">GPT-4o</span>
+    <span class="chip lbl">Claude-3.5</span>
+  </div>
+</div></body></html>

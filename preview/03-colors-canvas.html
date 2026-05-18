@@ -1,0 +1,20 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><link rel="stylesheet" href="_base.css">
+<style>
+  .card { padding: 20px 24px; gap: 8px; }
+  .row { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; }
+  .sw { display:flex; flex-direction:column; gap: 6px; }
+  .sw .chip { height: 64px; border-radius: 4px; border: 1px solid var(--line); }
+  .sw .n { font-family: var(--font-mono); font-size: 10px; color: var(--fg-1); letter-spacing: 0.1em; text-transform: uppercase; }
+  .sw .v { font-family: var(--font-mono); font-size: 10px; color: var(--fg-2); }
+  .heading { font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.14em; color: var(--fg-2); text-transform: uppercase; }
+</style></head>
+<body><div class="card">
+  <div class="heading">Canvas · backgrounds</div>
+  <div class="row">
+    <div class="sw"><div class="chip" style="background:#06070C"></div><div class="n">bg</div><div class="v">#06070C</div></div>
+    <div class="sw"><div class="chip" style="background:#0A0B12"></div><div class="n">bg-1</div><div class="v">#0A0B12</div></div>
+    <div class="sw"><div class="chip" style="background:#11131C"></div><div class="n">bg-2</div><div class="v">#11131C</div></div>
+    <div class="sw"><div class="chip" style="background:#08091A"></div><div class="n">bg-vis</div><div class="v">#08091A</div></div>
+  </div>
+</div></body></html>

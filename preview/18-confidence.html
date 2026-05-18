@@ -1,0 +1,19 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><link rel="stylesheet" href="_base.css">
+<style>
+  .card { padding: 24px; gap: 14px; justify-content: center; }
+  .row { display: grid; grid-template-columns: 100px 1fr 40px; gap: 14px; align-items: center; }
+  .lbl { font-family: var(--font-mono); font-size: 10px; text-transform: uppercase; letter-spacing: 0.14em; color: var(--fg-2); }
+  .v { font-family: var(--font-mono); font-size: 11px; color: var(--fg-1); text-align: right; }
+  .bar { height: 2px; background: var(--line); border-radius: 1px; overflow: hidden; }
+  .bar > div { height: 100%; background: var(--accent); transition: width 480ms cubic-bezier(0.2,0.7,0.1,1); }
+  .heading { font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.14em; color: var(--fg-2); text-transform: uppercase; }
+</style></head>
+<body><div class="card">
+  <div class="heading">Confidence bars · 2px stroke, left-fill, 480ms ease-out</div>
+  <div class="row"><div class="lbl">Strategist</div><div class="bar"><div style="width:72%"></div></div><div class="v">72%</div></div>
+  <div class="row"><div class="lbl">Researcher</div><div class="bar"><div style="width:61%"></div></div><div class="v">61%</div></div>
+  <div class="row"><div class="lbl">Analyst</div><div class="bar"><div style="width:68%"></div></div><div class="v">68%</div></div>
+  <div class="row"><div class="lbl">Writer</div><div class="bar"><div style="width:55%"></div></div><div class="v">55%</div></div>
+  <div class="row"><div class="lbl">Guardian</div><div class="bar"><div style="width:33%; background:#F2545B"></div></div><div class="v" style="color:#F2545B">33%</div></div>
+</div></body></html>

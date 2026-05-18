@@ -1,0 +1,23 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><link rel="stylesheet" href="_base.css">
+<style>
+  .card { padding: 20px 24px; gap: 12px; }
+  .row { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px; }
+  .sw { display:flex; flex-direction:column; gap: 8px; }
+  .sw .chip {
+    height: 56px; border-radius: 4px;
+    display: flex; align-items: center; justify-content: center;
+    font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase;
+  }
+  .sw .n { font-family: var(--font-mono); font-size: 10px; color: var(--fg-1); letter-spacing: 0.1em; text-transform: uppercase; }
+  .sw .v { font-family: var(--font-mono); font-size: 10px; color: var(--fg-2); }
+  .heading { font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.14em; color: var(--fg-2); text-transform: uppercase; }
+</style></head>
+<body><div class="card">
+  <div class="heading">Semantic — status only, never decorative</div>
+  <div class="row">
+    <div class="sw"><div class="chip" style="background:rgba(242,177,68,0.16);border:1px solid #F2B144;color:#F2B144;">WAITING</div><div class="n">warn</div><div class="v">#F2B144 · amber</div></div>
+    <div class="sw"><div class="chip" style="background:rgba(242,84,91,0.16);border:1px solid #F2545B;color:#F2545B;">BREACH</div><div class="n">danger</div><div class="v">#F2545B · red</div></div>
+    <div class="sw"><div class="chip" style="background:rgba(74,222,154,0.16);border:1px solid #4ADE9A;color:#4ADE9A;">COMPLETE</div><div class="n">ok</div><div class="v">#4ADE9A · green</div></div>
+  </div>
+</div></body></html>

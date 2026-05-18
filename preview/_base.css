@@ -1,0 +1,51 @@
+/* Shared base for preview cards. Imported from each card HTML. */
+@import url('../colors_and_type.css');
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background: var(--bg);
+  color: var(--fg);
+  overflow: hidden;
+}
+
+.card {
+  box-sizing: border-box;
+  width: 100%;
+  min-height: 100vh;
+  padding: 20px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  position: relative;
+}
+
+/* dotted corner accents — purely decorative */
+.card::before, .card::after {
+  content: '';
+  position: absolute;
+  width: 24px; height: 24px;
+  border: 1px solid var(--line);
+  pointer-events: none;
+  opacity: 0.6;
+}
+.card::before { top: 8px; left: 8px; border-right: none; border-bottom: none; }
+.card::after  { bottom: 8px; right: 8px; border-left: none; border-top: none; }
+
+.row { display: flex; gap: 12px; align-items: center; }
+.col { display: flex; flex-direction: column; gap: 8px; }
+
+.swatch {
+  display: flex; flex-direction: column; gap: 6px;
+  font-family: var(--font-mono);
+  font-size: 10px;
+  color: var(--fg-2);
+}
+.swatch .chip {
+  width: 100%;
+  height: 56px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-md);
+}
+.swatch .name { color: var(--fg-1); text-transform: uppercase; letter-spacing: 0.08em; }
+.swatch .val { color: var(--fg-2); }
