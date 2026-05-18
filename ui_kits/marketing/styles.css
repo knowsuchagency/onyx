@@ -44,15 +44,47 @@ html, body { margin: 0; background: var(--bg); color: var(--fg); font-family: va
 /* hero */
 .hero-mkt {
   position: relative;
-  padding: 80px 56px 100px;
+  padding: 80px 56px 140px;
   border-bottom: 1px solid var(--line);
   overflow: hidden;
 }
-.crosshair { position: absolute; color: var(--accent); opacity: 0.7; }
+.crosshair { position: absolute; color: var(--accent); opacity: 0.7; z-index: 2; }
 .ch-tl { top: 16px; left: 16px; }
 .ch-tr { top: 16px; right: 16px; }
 
-.hero-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center; max-width: 1400px; margin: 0 auto; }
+/* particle wave — sits behind hero content in the negative space below the console */
+.hero-wave {
+  position: absolute;
+  left: 0; right: 0; bottom: 0;
+  height: 72%;
+  pointer-events: none;
+  z-index: 0;
+  /* fade up into the hero background, and feather the bottom into the section border */
+  -webkit-mask-image: linear-gradient(to top, rgba(0,0,0,0.95) 35%, rgba(0,0,0,0.55) 70%, rgba(0,0,0,0) 100%);
+          mask-image: linear-gradient(to top, rgba(0,0,0,0.95) 35%, rgba(0,0,0,0.55) 70%, rgba(0,0,0,0) 100%);
+}
+.particle-wave {
+  position: absolute; inset: 0;
+  width: 100%; height: 100%;
+  display: block;
+}
+.hero-wave-tag {
+  position: absolute;
+  right: 56px; bottom: 28px;
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.16em;
+  color: var(--fg-3);
+  text-transform: uppercase;
+  z-index: 1;
+}
+
+.hero-grid {
+  position: relative;
+  z-index: 1;
+  display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center;
+  max-width: 1400px; margin: 0 auto;
+}
 
 .eyebrow {
   display: inline-flex; align-items: center; gap: 8px;
