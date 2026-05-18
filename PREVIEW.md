@@ -9,15 +9,6 @@
 
 ---
 
-## Reference
-
-Single render that defined the visual language — near-black canvas, indigo
-accent, dense run cards arranged across stage columns, particle-wave footer.
-
-![Onyx Agent Ops reference](assets/reference-agent-ops.png)
-
----
-
 ## UI kit — Agent Ops console
 
 The flagship surface. Top bar with command + status, left rail with agent
@@ -70,3 +61,12 @@ right rail Run Inspector, particle-wave bottom.
 | ![stage-header](assets/screenshots/preview/20-stage-header.png) | ![metric-strip](assets/screenshots/preview/21-metric-strip.png) |
 | ![agent-roster](assets/screenshots/preview/22-agent-roster.png) | ![connectors](assets/screenshots/preview/23-connectors.png) |
 | ![log-lines](assets/screenshots/preview/24-log-lines.png) | ![wave-bg](assets/screenshots/preview/26-wave-bg.png) |
+
+---
+
+## Reference
+
+Single render that defined the visual language — near-black canvas, indigo
+accent, dense run cards arranged across stage columns, particle-wave footer.
+
+![Onyx Agent Ops reference](assets/reference-agent-ops.png)
