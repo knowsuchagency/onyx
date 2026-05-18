@@ -3,6 +3,10 @@ function Hero() {
   return (
     <section className="hero-mkt">
       <Crosshair pos="tl" /><Crosshair pos="tr" />
+      <div className="hero-wave">
+        <ParticleWave />
+        <div className="hero-wave-tag">~600 dots · sine landscape · 0.45α indigo</div>
+      </div>
       <div className="hero-grid">
         <div className="hero-copy">
           <div className="eyebrow"><span className="dot" /> ORCHESTRATION OS · v1.0</div>

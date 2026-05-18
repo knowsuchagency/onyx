@@ -19,6 +19,10 @@ right rail Run Inspector, particle-wave bottom.
 
 ## UI kit — Marketing site
 
+Public-facing landing surface. Mission-control hero with inline console
+demo, particle-wave band sweeping the hero's negative space, feature grid,
+and footer.
+
 ![Onyx marketing UI kit](assets/screenshots/ui_kits/marketing.png)
 
 ---
